@@ -1,15 +1,11 @@
-# express-jwt-auth
+express-jwt-auth
 A Node.js-based authentication system using Express and JWT for secure user login and API access. This project demonstrates basic user authentication, token generation, and protected routes using JSON Web Tokens. Ideal for anyone looking to implement secure authentication in a Node.js application.
 
-#Steps to Run this project
-
-To run your Express application and test it using Postman, follow these steps:
-
+Steps to Run This Project
 Step 1: Start the Express Server
 Ensure your server is running:
-Open a terminal in your project directory.
 
-Run the following command:
+Open a terminal in your project directory and run the following command:
 
 bash
 Copy code
@@ -23,6 +19,7 @@ Step 2: Set Up Postman for Testing
 Open Postman:
 
 Launch Postman, a popular API client used for testing RESTful APIs.
+
 Testing the /signin Route (POST Request):
 
 Create a new request:
@@ -39,7 +36,7 @@ Select "raw" and then "JSON" from the dropdown.
 Enter the JSON body with the username and password:
 
 json
-
+Copy code
 {
     "username": "himanshu@gmail.com",
     "password": "123"
@@ -51,7 +48,7 @@ You should receive a response with a JSON Web Token (JWT) if the username and pa
 Example Response:
 
 json
-
+Copy code
 {
     "token": "your_jwt_token_here"
 }
@@ -75,7 +72,7 @@ You should receive a list of users, excluding the one whose token was used.
 Example Response:
 
 json
-
+Copy code
 [
     {
         "username": "swami@gmail.com",
@@ -88,8 +85,7 @@ json
         "name": "krushna patil"
     }
 ]
-
-Summary of Steps in Postman:
+Summary of Steps in Postman
 POST to /signin with a JSON body to receive a token.
 GET from /users using the received token in the Authorization header.
 If everything is set up correctly, these steps should allow you to authenticate users and retrieve data using your Express application with Postman.
